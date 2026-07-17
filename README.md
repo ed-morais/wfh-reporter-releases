@@ -18,14 +18,15 @@ Pick the file for your computer:
 | --- | --- |
 | 🍎 **Mac** | `WFH-Reporter.dmg` |
 | 🪟 **Windows** | `WFH-Reporter-Setup.exe` |
-| 🐧 **Linux (Ubuntu)** | `WFH-Reporter-x86_64.AppImage` |
+| 🐧 **Ubuntu** | `wfh-reporter_<version>_amd64.deb` |
+| 🐧 **Other Linux** | `WFH-Reporter-x86_64.AppImage` |
 
 ---
 
 ## 2. Install & open
 
 The app is safe, but it isn't code-signed (that costs a yearly fee), so the
-first time you open it your computer shows a caution. Here's the one-time step
+first time you open it your computer may show a caution. Here's the one-time step
 to get past it on each system.
 
 ### 🍎 Mac
@@ -47,11 +48,24 @@ to get past it on each system.
 
 > To remove it later: **Settings → Apps → Installed apps → WFH Reporter → Uninstall.**
 
-### 🐧 Linux (Ubuntu)
+### 🐧 Ubuntu — the installer (`.deb`)
+1. Open a terminal where you downloaded the file and run:
+   ```bash
+   sudo apt install ./wfh-reporter_*_amd64.deb
+   ```
+   *(Double-clicking the file may also work, but on recent Ubuntu the terminal
+   command above is the reliable way.)*
+2. Launch **WFH Reporter** from the apps menu (press the Super/Windows key and
+   type "WFH").
+
+> No "unidentified developer" scare — `apt` just installs it.
+> Remove it later with `sudo apt remove wfh-reporter` or from the Software app.
+
+### 🐧 Other Linux — the portable app (`.AppImage`)
 1. Make the file runnable — right-click `WFH-Reporter-x86_64.AppImage` →
    **Properties** → **Permissions** → tick **"Allow executing file as program"**
    (or in a terminal: `chmod +x WFH-Reporter-x86_64.AppImage`).
-2. Double-click it to run.
+2. Double-click it to run. Nothing is installed — it's a single self-contained file.
 
 > **Two one-time bits on Ubuntu 22.04+**, if it doesn't start:
 > - `sudo apt install libfuse2` (the runtime the AppImage needs)
