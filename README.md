@@ -16,9 +16,9 @@ Pick the file for your computer:
 
 | Your computer | Download this file |
 | --- | --- |
-| 🍎 **Mac** | `WFH-Reporter-mac.zip` |
-| 🪟 **Windows** | `WFH-Reporter-windows.zip` |
-| 🐧 **Linux (Ubuntu)** | `WFH-Reporter-x86_64.AppImage` |
+| **Mac** | `WFH-Reporter-mac.zip` |
+| **Windows** | `WFH-Reporter-windows.zip` |
+| **Linux (Ubuntu)** | `WFH-Reporter-x86_64.AppImage` |
 
 ---
 
@@ -28,7 +28,7 @@ The app is safe, but it isn't code-signed (that costs a yearly fee), so the
 first time you open it your computer shows a caution. Here's the one-time step
 to get past it on each system.
 
-### 🍎 Mac
+### Mac
 1. Double-click `WFH-Reporter-mac.zip` to unzip it.
 2. Drag **WFH Reporter** into your **Applications** folder.
 3. **Right-click** it → **Open** → **Open** again in the dialog.
@@ -37,7 +37,7 @@ to get past it on each system.
 > If you double-click instead of right-click, macOS blocks it with
 > "unidentified developer." Right-click → Open is the trick.
 
-### 🪟 Windows
+### Windows
 1. Right-click `WFH-Reporter-windows.zip` → **Extract All**.
 2. Open the extracted folder and double-click **`WFH Reporter.exe`**.
 3. If a blue **"Windows protected your PC"** box appears:
@@ -45,7 +45,7 @@ to get past it on each system.
 
 > Keep the whole folder together — the `.exe` needs the files next to it.
 
-### 🐧 Linux (Ubuntu)
+### Linux (Ubuntu)
 1. Make the file runnable — right-click `WFH-Reporter-x86_64.AppImage` →
    **Properties** → **Permissions** → tick **"Allow executing file as program"**
    (or in a terminal: `chmod +x WFH-Reporter-x86_64.AppImage`).
