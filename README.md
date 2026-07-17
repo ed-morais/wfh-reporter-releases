@@ -93,7 +93,7 @@ check any time in **Settings → About**.
 ## 6. Something wrong, or an idea?
 
 Use the **Feedback** button in the app's sidebar (bug reports, questions, and
-suggestions all welcome), or email **edilson@atr.jp** directly.
+suggestions all welcome).
 
 ---
 
