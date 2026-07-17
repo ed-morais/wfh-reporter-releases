@@ -16,7 +16,7 @@ Pick the file for your computer:
 
 | Your computer | Download this file |
 | --- | --- |
-| 🍎 **Mac** | `WFH-Reporter-mac.zip` |
+| 🍎 **Mac** | `WFH-Reporter.dmg` |
 | 🪟 **Windows** | `WFH-Reporter-Setup.exe` |
 | 🐧 **Linux (Ubuntu)** | `WFH-Reporter-x86_64.AppImage` |
 
@@ -28,6 +28,15 @@ The app is safe, but it isn't code-signed (that costs a yearly fee), so the
 first time you open it your computer shows a caution. Here's the one-time step
 to get past it on each system.
 
+### 🍎 Mac
+1. Double-click **`WFH-Reporter.dmg`**.
+2. In the window that opens, **drag WFH Reporter onto the Applications folder.**
+3. Open **Applications**, then **right-click** WFH Reporter → **Open** → **Open**
+   again in the dialog. *(Just this first time — after that, open it normally.)*
+
+> If you double-click instead of right-click that first time, macOS blocks it with
+> "unidentified developer." Right-click → Open is the trick.
+
 ### 🪟 Windows
 1. Double-click **`WFH-Reporter-Setup.exe`**.
 2. If a blue **"Windows protected your PC"** box appears:
@@ -37,15 +46,6 @@ to get past it on each system.
 4. Launch it from the **Start Menu** like any other program.
 
 > To remove it later: **Settings → Apps → Installed apps → WFH Reporter → Uninstall.**
-
-### 🍎 Mac
-1. Double-click `WFH-Reporter-mac.zip` to unzip it.
-2. Drag **WFH Reporter** into your **Applications** folder.
-3. **Right-click** it → **Open** → **Open** again in the dialog.
-   *(Just this first time — after that, open it normally.)*
-
-> If you double-click instead of right-click, macOS blocks it with
-> "unidentified developer." Right-click → Open is the trick.
 
 ### 🐧 Linux (Ubuntu)
 1. Make the file runnable — right-click `WFH-Reporter-x86_64.AppImage` →
