@@ -16,9 +16,9 @@ Pick the file for your computer:
 
 | Your computer | Download this file |
 | --- | --- |
-| **Mac** | `WFH-Reporter-mac.zip` |
-| **Windows** | `WFH-Reporter-windows.zip` |
-| **Linux (Ubuntu)** | `WFH-Reporter-x86_64.AppImage` |
+| 🍎 **Mac** | `WFH-Reporter-mac.zip` |
+| 🪟 **Windows** | `WFH-Reporter-Setup.exe` |
+| 🐧 **Linux (Ubuntu)** | `WFH-Reporter-x86_64.AppImage` |
 
 ---
 
@@ -28,7 +28,17 @@ The app is safe, but it isn't code-signed (that costs a yearly fee), so the
 first time you open it your computer shows a caution. Here's the one-time step
 to get past it on each system.
 
-### Mac
+### 🪟 Windows
+1. Double-click **`WFH-Reporter-Setup.exe`**.
+2. If a blue **"Windows protected your PC"** box appears:
+   **More info** → **Run anyway**. *(First time only.)*
+3. Follow the short installer. It installs for **just you** (no admin needed) and
+   adds a **WFH Reporter** shortcut to your Start Menu.
+4. Launch it from the **Start Menu** like any other program.
+
+> To remove it later: **Settings → Apps → Installed apps → WFH Reporter → Uninstall.**
+
+### 🍎 Mac
 1. Double-click `WFH-Reporter-mac.zip` to unzip it.
 2. Drag **WFH Reporter** into your **Applications** folder.
 3. **Right-click** it → **Open** → **Open** again in the dialog.
@@ -37,15 +47,7 @@ to get past it on each system.
 > If you double-click instead of right-click, macOS blocks it with
 > "unidentified developer." Right-click → Open is the trick.
 
-### Windows
-1. Right-click `WFH-Reporter-windows.zip` → **Extract All**.
-2. Open the extracted folder and double-click **`WFH Reporter.exe`**.
-3. If a blue **"Windows protected your PC"** box appears:
-   **More info** → **Run anyway**. *(First time only.)*
-
-> Keep the whole folder together — the `.exe` needs the files next to it.
-
-### Linux (Ubuntu)
+### 🐧 Linux (Ubuntu)
 1. Make the file runnable — right-click `WFH-Reporter-x86_64.AppImage` →
    **Properties** → **Permissions** → tick **"Allow executing file as program"**
    (or in a terminal: `chmod +x WFH-Reporter-x86_64.AppImage`).
@@ -93,8 +95,9 @@ check any time in **Settings → About**.
 ## 6. Something wrong, or an idea?
 
 Use the **Feedback** button in the app's sidebar (bug reports, questions, and
-suggestions all welcome).
+suggestions all welcome), or email **edilson@atr.jp** directly.
 
 ---
 
-*This page has the downloads only.*
+*This page has the downloads only. If it won't open, re-check the one-time step
+in section 2 for your system.*
