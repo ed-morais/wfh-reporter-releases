@@ -1,117 +1,92 @@
 # WFH Reporter
 
-A small desktop app that writes your daily Work-From-Home report for you — it
-fills the monthly Excel form, formats the Japanese date and email subject, and
-sends it. You just write what you worked on.
+A desktop app that writes your daily Work-From-Home report: it fills the monthly
+Excel form, formats the Japanese date and email subject, and sends the email. You
+write what you worked on.
 
-Works on **macOS, Windows, and Linux**. Available in **English and 日本語**.
+Runs on macOS, Windows, and Linux. English and 日本語.
 
----
+## Download
 
-## 1. Download
+[Download the latest version.](../../releases/latest)
 
-### ⬇ **[Download the latest version](../../releases/latest)**
-
-Pick the file for your computer:
-
-| Your computer | Download this file |
+| System | File |
 | --- | --- |
-| 🍎 **Mac** | `WFH-Reporter.dmg` |
-| 🪟 **Windows** | `WFH-Reporter-Setup.exe` |
-| 🐧 **Ubuntu** | `wfh-reporter_<version>_amd64.deb` |
-| 🐧 **Other Linux** | `WFH-Reporter-x86_64.AppImage` |
+| Mac | `WFH-Reporter.dmg` |
+| Windows | `WFH-Reporter-Setup.exe` |
+| Ubuntu | `wfh-reporter_<version>_amd64.deb` |
+| Other Linux | `WFH-Reporter-x86_64.AppImage` |
 
----
+The app is not code-signed, so the first launch shows a one-time warning on Mac
+and Windows. The steps below get past it.
 
-## 2. Install & open
+## Install
 
-The app is safe, but it isn't code-signed (that costs a yearly fee), so the
-first time you open it your computer may show a caution. Here's the one-time step
-to get past it on each system.
+### Mac
+1. Open `WFH-Reporter.dmg`.
+2. Drag WFH Reporter onto the Applications folder.
+3. In Applications, right-click WFH Reporter and choose Open, then Open again.
+   Do this the first time only; after that, double-click as usual.
 
-### 🍎 Mac
-1. Double-click **`WFH-Reporter.dmg`**.
-2. In the window that opens, **drag WFH Reporter onto the Applications folder.**
-3. Open **Applications**, then **right-click** WFH Reporter → **Open** → **Open**
-   again in the dialog. *(Just this first time — after that, open it normally.)*
+Double-clicking the first time gives an "unidentified developer" error. Right-click
+then Open avoids it.
 
-> If you double-click instead of right-click that first time, macOS blocks it with
-> "unidentified developer." Right-click → Open is the trick.
+### Windows
+1. Run `WFH-Reporter-Setup.exe`.
+2. If a "Windows protected your PC" box appears, click More info, then Run anyway.
+3. Complete the installer. It installs for the current user (no admin needed) and
+   adds a Start Menu shortcut.
 
-### 🪟 Windows
-1. Double-click **`WFH-Reporter-Setup.exe`**.
-2. If a blue **"Windows protected your PC"** box appears:
-   **More info** → **Run anyway**. *(First time only.)*
-3. Follow the short installer. It installs for **just you** (no admin needed) and
-   adds a **WFH Reporter** shortcut to your Start Menu.
-4. Launch it from the **Start Menu** like any other program.
+Uninstall from Settings > Apps > Installed apps > WFH Reporter.
 
-> To remove it later: **Settings → Apps → Installed apps → WFH Reporter → Uninstall.**
+### Ubuntu (.deb)
+Install from a terminal in the download folder:
 
-### 🐧 Ubuntu — the installer (`.deb`)
-1. Open a terminal where you downloaded the file and run:
-   ```bash
-   sudo apt install ./wfh-reporter_*_amd64.deb
-   ```
-   *(Double-clicking the file may also work, but on recent Ubuntu the terminal
-   command above is the reliable way.)*
-2. Launch **WFH Reporter** from the apps menu (press the Super/Windows key and
-   type "WFH").
+```bash
+sudo apt install ./wfh-reporter_*_amd64.deb
+```
 
-> No "unidentified developer" scare — `apt` just installs it.
-> Remove it later with `sudo apt remove wfh-reporter` or from the Software app.
+Then launch WFH Reporter from the applications menu. Uninstall with
+`sudo apt remove wfh-reporter`.
 
-### 🐧 Other Linux — the portable app (`.AppImage`)
-1. Make the file runnable — right-click `WFH-Reporter-x86_64.AppImage` →
-   **Properties** → **Permissions** → tick **"Allow executing file as program"**
-   (or in a terminal: `chmod +x WFH-Reporter-x86_64.AppImage`).
-2. Double-click it to run. Nothing is installed — it's a single self-contained file.
+Double-clicking the `.deb` may also work, but on recent Ubuntu the terminal command
+is more reliable.
 
-> **Two one-time bits on Ubuntu 22.04+**, if it doesn't start:
-> - `sudo apt install libfuse2` (the runtime the AppImage needs)
-> - `sudo apt install gnome-keyring` (so it can save your password securely)
+### Other Linux (AppImage)
+1. Make it executable: `chmod +x WFH-Reporter-x86_64.AppImage` (or right-click >
+   Properties > Permissions > Allow executing file as program).
+2. Double-click to run. Nothing is installed.
 
----
+On Ubuntu 22.04+ the AppImage needs `libfuse2` (`sudo apt install libfuse2`), and
+`gnome-keyring` to store the password (`sudo apt install gnome-keyring`).
 
-## 3. First run — set up (about a minute)
+## First run
 
-A short wizard walks you through three screens:
+A short setup covers three screens:
 
-1. **Your profile** — your name, department, and employee ID.
-2. **Email account** — your **OneOffice email** and **password**. The server and
-   port are already filled in. Click **Test Connection** to check it works.
-3. **Defaults** — your usual work hours (already filled with 09:00–17:30), your
-   project/fund code, and who your reports go **To** / **Cc**.
+1. Profile: name, department, employee ID.
+2. Email account: OneOffice email and password. The server and port are pre-filled.
+   Use Test Connection to check them.
+3. Defaults: work hours (pre-filled 09:00-17:30), project/fund code, and the To/Cc
+   recipients.
 
-Your password is stored in your computer's secure keychain — **never on disk and
-never sent anywhere except your mail login.** Your setup stays on your computer.
+The password is stored in the operating system keychain, not on disk, and is only
+sent to your mail login. Setup stays on your computer.
 
----
+## Sending a report
 
-## 4. Sending a report
+On the Daily Report screen, check the date, adjust the hours if needed, write what
+you did, and click Send Report. The spreadsheet is filled and emailed.
 
-On the **Daily Report** screen: check the date, adjust your work hours if needed,
-write what you did, then **Send Report**. That's it — the spreadsheet is filled
-and emailed for you.
+- Save for later keeps a draft you can finish from History.
+- Change the date at the top to backfill a missed day.
+- Reports are saved under Documents/WFH Reporter.
 
-- **Save for later** keeps a draft you can finish and send from **History**.
-- **Forgot a day?** Change the date at the top to backfill it.
-- Reports are saved on your computer under **Documents → WFH Reporter**.
+## Updates
 
----
+When a newer version is available, an "Update available" button appears in the
+sidebar and links back here. You can also check under Settings > About.
 
-## 5. Staying up to date
+## Feedback
 
-When a newer version is out, an **"Update available"** button appears in the
-sidebar — click it to come back here and download the new file. You can also
-check any time in **Settings → About**.
-
-## 6. Something wrong, or an idea?
-
-Use the **Feedback** button in the app's sidebar (bug reports, questions, and
-suggestions all welcome), or email **edilson@atr.jp** directly.
-
----
-
-*This page has the downloads only. If it won't open, re-check the one-time step
-in section 2 for your system.*
+Use the Feedback button in the sidebar, or email edilson@atr.jp.
