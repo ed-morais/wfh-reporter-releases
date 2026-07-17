@@ -97,5 +97,4 @@ suggestions all welcome).
 
 ---
 
-*This page has the downloads only. If it won't open, re-check the one-time step
-in section 2 for your system.*
+*This page has the downloads only.*
